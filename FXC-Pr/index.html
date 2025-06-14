@@ -4,14 +4,62 @@
     <script src="main.js"></script>
     <link rel="stylesheet" href="./Styles/style.css" />
   </head>
-  <body>
-    <h4>Application Info</h4>
-    <div class="main-div">
-      <sp-body id="plugin-body"> </sp-body>
+  <body tabindex="0">
+    <div class="fx-console" tabindex="0">
+      <!-- Search Header -->
+      <div class="search-header">
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Search effects, transitions, presets..."
+          autocomplete="off"
+        />
+        <div class="search-info">
+          <span id="search-count">0 results</span>
+          <span class="shortcut-hint"
+            >Click panel first, then Ctrl+Alt+Space</span
+          >
+        </div>
+      </div>
+
+      <!-- Results Container -->
+      <div class="results-container" id="results-container">
+        <div class="results-list" id="results-list">
+          <!-- Results will be populated here -->
+          <div class="no-results" id="no-results">
+            <div class="welcome-message">
+              <h3>🎬 Fx Console for Premiere Pro</h3>
+              <p>Type to search for effects, transitions, and presets</p>
+              <div class="usage-note">
+                <p>
+                  <strong>💡 Tip:</strong> Click this panel first to enable
+                  shortcuts
+                </p>
+              </div>
+              <div class="quick-tips">
+                <div class="tip"><span class="key">↑↓</span> Navigate</div>
+                <div class="tip"><span class="key">Enter</span> Apply</div>
+                <div class="tip"><span class="key">Esc</span> Close</div>
+                <div class="tip">
+                  <span class="key">Ctrl+Alt+Space</span> Focus Search
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span id="status-text">Ready</span>
+        <div class="status-actions">
+          <button id="settings-btn" class="icon-btn" title="Settings">
+            ⚙️
+          </button>
+          <button id="help-btn" class="icon-btn" title="Help">❓</button>
+        </div>
+      </div>
     </div>
-    <footer>
-      <sp-button id="btnPopulate">Populate Application Info</sp-button>
-      <sp-button id="clear-btn">Clear Application Info</sp-button>
-    </footer>
   </body>
 </html>
